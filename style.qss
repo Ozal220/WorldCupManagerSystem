@@ -1,0 +1,21 @@
+
+/* 按钮样式 */
+QPushButton:flat {
+    border:2px solid;
+    border-bottom-color: rgba(0, 0,0,0);
+    border-top-color: rgba(0, 0,0,0);
+    border-right-color: rgba(0, 0, 0,0);
+    border-left-color: rgba(0,0,0,0);
+
+}
+
+QPushButton:hover{
+        background: rgb(85, 85, 85);
+}
+QPushButton:pressed{
+        background: rgb(80, 80, 80);
+}
+QPushButton:checked{
+        background: green;
+        border-bottom-color: rgb(240, 245, 249);
+}

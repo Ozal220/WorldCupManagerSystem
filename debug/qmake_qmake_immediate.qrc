@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="RC_FILE">G:/QtCode/worldCupDBMS/RC_FILE</file>
+<file alias="=">G:/QtCode/worldCupDBMS/=</file>
+<file alias="icon.rc">G:/QtCode/worldCupDBMS/icon.rc</file>
+</qresource>
+</RCC>
