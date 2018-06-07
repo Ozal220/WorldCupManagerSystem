@@ -15,6 +15,9 @@ ManagerWindow::ManagerWindow(QWidget *parent) :
     pButtonGroup->addButton(ui->pushButton_4);
     // 设置互斥
     pButtonGroup->setExclusive(true);
+    ui->matchDays->setFlat(true);
+    ui->pushButton_4->setFlat(true);
+    ui->score->setFlat(true);
 }
 
 ManagerWindow::~ManagerWindow()

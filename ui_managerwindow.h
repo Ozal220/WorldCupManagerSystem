@@ -40,7 +40,7 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral(":/new/prefix1/icon.ico"), QSize(), QIcon::Normal, QIcon::Off);
         ManagerWindow->setWindowIcon(icon);
-        ManagerWindow->setStyleSheet(QStringLiteral("background-color: rgb(240, 245, 249);"));
+        ManagerWindow->setStyleSheet(QStringLiteral(""));
         ManagerWindow->setIconSize(QSize(100, 100));
         centralwidget = new QWidget(ManagerWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
@@ -50,34 +50,26 @@ public:
         label->setStyleSheet(QStringLiteral("background-color: rgb(65, 110, 162);"));
         score = new QPushButton(centralwidget);
         score->setObjectName(QStringLiteral("score"));
-        score->setGeometry(QRect(420, 80, 81, 30));
+        score->setGeometry(QRect(400, 69, 121, 41));
         score->setCursor(QCursor(Qt::PointingHandCursor));
-        score->setStyleSheet(QString::fromUtf8("background-color: rgb(65, 110, 162);\n"
-"font: 12pt \"\351\273\221\344\275\223\";\n"
-"color: rgb(248, 250, 255);"));
+        score->setStyleSheet(QStringLiteral(""));
         score->setCheckable(true);
         score->setFlat(true);
         matchDays = new QPushButton(centralwidget);
         matchDays->setObjectName(QStringLiteral("matchDays"));
-        matchDays->setGeometry(QRect(240, 80, 81, 30));
+        matchDays->setGeometry(QRect(200, 69, 121, 41));
         matchDays->setCursor(QCursor(Qt::PointingHandCursor));
         matchDays->setFocusPolicy(Qt::TabFocus);
         matchDays->setAutoFillBackground(false);
-        matchDays->setStyleSheet(QString::fromUtf8("background-color: rgb(65, 110, 162);\n"
-"\n"
-"font: 12pt \"\351\273\221\344\275\223\";\n"
-"color: rgb(248, 250, 255);"));
+        matchDays->setStyleSheet(QStringLiteral(""));
         matchDays->setIcon(icon);
         matchDays->setCheckable(true);
         matchDays->setChecked(true);
         matchDays->setFlat(true);
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(580, 80, 131, 30));
+        pushButton_4->setGeometry(QRect(600, 69, 121, 41));
         pushButton_4->setCursor(QCursor(Qt::PointingHandCursor));
-        pushButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(65, 110, 162);\n"
-"font: 12pt \"\351\273\221\344\275\223\";\n"
-"color: rgb(248, 250, 255);"));
         pushButton_4->setCheckable(true);
         pushButton_4->setFlat(true);
         ManagerWindow->setCentralWidget(centralwidget);

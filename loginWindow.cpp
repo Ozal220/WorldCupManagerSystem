@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     setWindowTitle("World Cup!");
     setWindowIcon(QIcon("icon.ico"));
-//    ui->connectLable->setVisible(false);
+    ui->connectLable->setVisible(false);
     setWindowFlags(Qt::WindowStaysOnTopHint);
     QPixmap pixmap("icon-worldCup");
     ui->image->setPixmap(pixmap);

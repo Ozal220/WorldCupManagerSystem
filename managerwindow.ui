@@ -18,7 +18,7 @@
     <normaloff>:/new/prefix1/icon.ico</normaloff>:/new/prefix1/icon.ico</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(240, 245, 249);</string>
+   <string notr="true"/>
   </property>
   <property name="iconSize">
    <size>
@@ -46,19 +46,17 @@
    <widget class="QPushButton" name="score">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>80</y>
-      <width>81</width>
-      <height>30</height>
+      <x>400</x>
+      <y>70</y>
+      <width>120</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(65, 110, 162);
-font: 12pt &quot;黑体&quot;;
-color: rgb(248, 250, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>积分榜</string>
@@ -73,10 +71,10 @@ color: rgb(248, 250, 255);</string>
    <widget class="QPushButton" name="matchDays">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>80</y>
-      <width>81</width>
-      <height>30</height>
+      <x>140</x>
+      <y>70</y>
+      <width>120</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="cursor">
@@ -89,10 +87,7 @@ color: rgb(248, 250, 255);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(65, 110, 162);
-
-font: 12pt &quot;黑体&quot;;
-color: rgb(248, 250, 255);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>赛程</string>
@@ -117,19 +112,14 @@ color: rgb(248, 250, 255);</string>
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>580</x>
-      <y>80</y>
-      <width>131</width>
-      <height>30</height>
+      <x>640</x>
+      <y>70</y>
+      <width>120</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(65, 110, 162);
-font: 12pt &quot;黑体&quot;;
-color: rgb(248, 250, 255);</string>
     </property>
     <property name="text">
      <string>...</string>
