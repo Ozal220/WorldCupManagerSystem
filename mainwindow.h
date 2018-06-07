@@ -1,0 +1,4 @@
+#ifndef LOGINWINDOW_H
+#define LOGINWINDOW_H
+
+#endif // LOGINWINDOW_H
