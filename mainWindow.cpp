@@ -1,7 +1,7 @@
-#include "loginWindow.h"
+#include "mainWindow.h"
 #include "ui_mainwindow.h"
-#include "managerlogin.h"
 #include <QPixmap>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->image->setPixmap(pixmap);
     ui->image->setFixedSize(50, 50);
     ui->image->setScaledContents(true);
+
     connectMySql();
 }
 
@@ -25,15 +26,22 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_managerButton_clicked()
 {
-    this->hide();//主界面隐藏
-    managerLogin *mLogin = new managerLogin(this);
-    connect(mLogin, SIGNAL(sendShowSignal()), this, SLOT(reShow()));
-    connect(mLogin, SIGNAL(sendCloseSignal()), this, SLOT(close()));
+    this->setVisible(false);//主界面隐藏
+    mLogin = new managerLogin(this);
+    connect(mLogin, SIGNAL(ShowSignal()), this, SLOT(reShow()));
+    connect(mLogin, SIGNAL(ManagerLoginSignal()), this, SLOT(closeManagerLogin()));
     mLogin->show();
 }
 
+void MainWindow::closeManagerLogin()
+{
+    mLogin->close();
+    mWindow = new ManagerWindow(this);
+    mWindow->show();
+}
+
 void MainWindow::reShow(){
-    this->show();
+    this->setVisible(true);
 }
 
 bool MainWindow::connectMySql(){

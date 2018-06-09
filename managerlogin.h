@@ -24,8 +24,9 @@ private slots:
     void on_loginButton_clicked();
 
 signals:
-    void sendShowSignal();//这个函数用户向主界面通知重新显示的消息
-    void sendCloseSignal();//这个函数用户向主界面通知关闭的消息
+    void ShowSignal();//这个函数用户向主界面通知重新显示的消息
+    void CloseSignal();//这个函数用户向主界面通知关闭的消息
+    void ManagerLoginSignal();
 
 private:
     Ui::managerLogin *ui;

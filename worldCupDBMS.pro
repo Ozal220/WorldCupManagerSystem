@@ -24,20 +24,27 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp \
-    loginWindow.cpp \
     managerlogin.cpp \
-    managerwindow.cpp
+    managerwindow.cpp \
+    mainWindow.cpp \
+    matchviewform.cpp \
+    playerpage.cpp
 
 HEADERS  += \
-    loginWindow.h \
     managerlogin.h \
     sqlController.h \
     managerwindow.h \
-    qss.h
+    qss.h \
+    mainwindow.h \
+    matchviewform.h \
+    playerpage.h
 
-FORMS    += mainwindow.ui \
+FORMS    += \
     managerlogin.ui \
-    managerwindow.ui
+    managerwindow.ui \
+    mainwindow.ui \
+    matchviewform.ui \
+    playerpage.ui
 
 RESOURCES += \
     resourse.qrc

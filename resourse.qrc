@@ -3,5 +3,11 @@
         <file>icon.ico</file>
         <file>icon-worldCup.png</file>
         <file>style.qss</file>
+        <file>icons8-performance-48.png</file>
+        <file>icons8-scoreboard-48.png</file>
+        <file>icons8-scoreboard-filled-50.png</file>
+        <file>icons8-soccer-48.png</file>
+        <file>icons8-stadium-48.png</file>
+        <file>icons8-user-groups-filled-50.png</file>
     </qresource>
 </RCC>

@@ -27,8 +27,8 @@ managerLogin::~managerLogin()
 
 void managerLogin::on_returnButton_clicked()
 {
-    emit sendShowSignal();
-    this->close();
+    emit ShowSignal();
+//    this->close();
 }
 
 void managerLogin::enableLoginButton(const QString& psw){
@@ -41,11 +41,7 @@ void managerLogin::on_loginButton_clicked()
     sqlController *sqlCheck = new sqlController;
     bool success = sqlCheck->checkUser(ui->nameLineEdit->text(), ui->pswLineEdit->text());
     if(success){
-//        qDebug() << "success1\n";
-        this->hide();
-        ManagerWindow *mWindow = new ManagerWindow(this);
-        mWindow->show();
-        //emit sendCloseSignal();
+        emit ManagerLoginSignal();
     }
     else
         ui->warningLabel->setVisible(true);
