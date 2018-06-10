@@ -2,7 +2,7 @@
 #define LOGINWINDOW_H
 #include <QMainWindow>
 #include <QtSql/QSqlDatabase>
-#include <QMessageBox>
+#include <QtGui>
 #include <QDebug>
 #include "managerlogin.h"
 #include "managerwindow.h"

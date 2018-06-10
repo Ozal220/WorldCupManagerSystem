@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>800</height>
+    <width>1200</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,8 +32,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1011</width>
-      <height>111</height>
+      <width>1200</width>
+      <height>80</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -43,23 +43,108 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="score">
+   <widget class="QStackedWidget" name="pStackedWidget">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>70</y>
-      <width>120</width>
-      <height>41</height>
+      <x>9</x>
+      <y>88</y>
+      <width>1180</width>
+      <height>801</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="playerButton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>240</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>121</width>
+      <height>49</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
-    <property name="styleSheet">
-     <string notr="true"/>
+    <property name="text">
+     <string>编辑球员</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resourse.qrc">
+      <normaloff>:/new/prefix1/icons8-soccer-48.png</normaloff>:/new/prefix1/icons8-soccer-48.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="teamButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>30</y>
+      <width>240</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>1</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="text">
-     <string>编辑积分榜</string>
+     <string>编辑球队</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resourse.qrc">
+      <normaloff>:/new/prefix1/icons8-user-groups-filled-50.png</normaloff>:/new/prefix1/icons8-user-groups-filled-50.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
     <property name="checkable">
      <bool>true</bool>
@@ -71,11 +156,23 @@
    <widget class="QPushButton" name="matchDays">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>70</y>
-      <width>120</width>
-      <height>41</height>
+      <x>480</x>
+      <y>30</y>
+      <width>240</width>
+      <height>49</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
@@ -94,7 +191,13 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icon.ico</normaloff>:/new/prefix1/icon.ico</iconset>
+      <normaloff>:/new/prefix1/icons8-stadium-48.png</normaloff>:/new/prefix1/icons8-stadium-48.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
     <property name="checkable">
      <bool>true</bool>
@@ -112,11 +215,23 @@
    <widget class="QPushButton" name="stadiumButton">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>70</y>
-      <width>120</width>
-      <height>41</height>
+      <x>960</x>
+      <y>30</y>
+      <width>240</width>
+      <height>49</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
@@ -124,6 +239,16 @@
     <property name="text">
      <string>编辑场馆</string>
     </property>
+    <property name="icon">
+     <iconset resource="resourse.qrc">
+      <normaloff>:/new/prefix1/icons8-performance-48.png</normaloff>:/new/prefix1/icons8-performance-48.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
     <property name="checkable">
      <bool>true</bool>
     </property>
@@ -131,58 +256,51 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="playerButton">
+   <widget class="QPushButton" name="score">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>120</width>
-      <height>41</height>
+      <x>720</x>
+      <y>30</y>
+      <width>240</width>
+      <height>49</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>12</pointsize>
+     </font>
     </property>
     <property name="cursor">
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
-     <string>编辑球员</string>
+     <string>编辑积分</string>
+    </property>
+    <property name="icon">
+     <iconset resource="resourse.qrc">
+      <normaloff>:/new/prefix1/icons8-scoreboard-48.png</normaloff>:/new/prefix1/icons8-scoreboard-48.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
     <property name="checkable">
      <bool>true</bool>
     </property>
     <property name="flat">
      <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="teamButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>70</y>
-      <width>120</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="cursor">
-     <cursorShape>PointingHandCursor</cursorShape>
-    </property>
-    <property name="text">
-     <string>编辑球队</string>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-    <property name="flat">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QStackedWidget" name="pStackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>119</y>
-      <width>981</width>
-      <height>671</height>
-     </rect>
     </property>
    </widget>
   </widget>

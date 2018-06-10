@@ -26,12 +26,20 @@ ManagerWindow::ManagerWindow(QWidget *parent) :
     ui->stadiumButton->setFlat(true);
 
     // 加载子页面，加入到StackWidget中
-    matchPage = new MatchViewForm();
-    m_playerPage = new playerPage();
+    p_matchPage = new MatchViewForm();
+    p_playerPage = new playerPage();
+    p_teamPage = new TeamPage();
+    p_scorePage = new scorePage();
+    p_stadiumPage = new stadiumPage();
 
     // 利用StackWidget来实现子界面切换：赛程，积分，...
-    ui->pStackedWidget->addWidget(matchPage);    // 0
-    ui->pStackedWidget->addWidget(m_playerPage);     // 1
+    ui->pStackedWidget->addWidget(p_playerPage);     // 0
+    ui->pStackedWidget->addWidget(p_teamPage);      // 1
+    ui->pStackedWidget->addWidget(p_matchPage);    // 2
+    ui->pStackedWidget->addWidget(p_scorePage);
+    ui->pStackedWidget->addWidget(p_stadiumPage);
+
+    ui->pStackedWidget->setCurrentWidget(p_matchPage); // 首页显示赛程
 
 }
 
@@ -40,18 +48,23 @@ ManagerWindow::~ManagerWindow()
     delete ui;
 }
 
-void ManagerWindow::on_score_clicked()
-{
-
-}
-
-void ManagerWindow::on_matchDays_clicked()
-{
-
+void ManagerWindow::on_playerButton_clicked(){
     ui->pStackedWidget->setCurrentIndex(0);
 }
 
-void ManagerWindow::on_playerButton_clicked()
-{
+void ManagerWindow::on_teamButton_clicked(){
     ui->pStackedWidget->setCurrentIndex(1);
+}
+
+void ManagerWindow::on_matchDays_clicked(){
+
+    ui->pStackedWidget->setCurrentIndex(2);
+}
+
+void ManagerWindow::on_score_clicked(){
+    ui->pStackedWidget->setCurrentIndex(3);
+}
+
+void ManagerWindow::on_stadiumButton_clicked(){
+    ui->pStackedWidget->setCurrentIndex(4);
 }

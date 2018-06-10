@@ -55,7 +55,7 @@ bool MainWindow::connectMySql(){
           ui->connectLable->setText("数据库连接成功");
           return true;
     }else{
-          QMessageBox::warning(NULL,"警告","无法连接数据库");
+          //QMessageBox::warning(NULL,"警告","无法连接数据库");
           return false;
     }
 }

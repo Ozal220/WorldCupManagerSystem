@@ -28,7 +28,10 @@ SOURCES += main.cpp \
     managerwindow.cpp \
     mainWindow.cpp \
     matchviewform.cpp \
-    playerpage.cpp
+    playerpage.cpp \
+    teampage.cpp \
+    scorepage.cpp \
+    stadiumpage.cpp
 
 HEADERS  += \
     managerlogin.h \
@@ -37,14 +40,20 @@ HEADERS  += \
     qss.h \
     mainwindow.h \
     matchviewform.h \
-    playerpage.h
+    playerpage.h \
+    teampage.h \
+    scorepage.h \
+    stadiumpage.h
 
 FORMS    += \
     managerlogin.ui \
     managerwindow.ui \
     mainwindow.ui \
     matchviewform.ui \
-    playerpage.ui
+    playerpage.ui \
+    teampage.ui \
+    scorepage.ui \
+    stadiumpage.ui
 
 RESOURCES += \
     resourse.qrc

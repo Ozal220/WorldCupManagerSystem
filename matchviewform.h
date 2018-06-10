@@ -21,6 +21,17 @@ private slots:
 
     void on_submitButton_clicked();
 
+    void on_deleteButton_clicked();
+
+    void enableDeleteButton();
+
+    void unenableDeleteButton();
+
+    void on_addButton_clicked();
+
+signals:
+    void unenable();
+
 private:
     Ui::MatchViewForm *ui;
     QSqlTableModel *model = 0;

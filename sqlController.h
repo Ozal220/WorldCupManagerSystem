@@ -3,7 +3,7 @@
 
 #include<QSqlDatabase>
 #include<QString>
-#include<QMessageBox>
+//#include<QMessageBox>
 #include<QSqlQuery>
 #include<qDebug>
 class sqlController{

@@ -4,7 +4,6 @@
 #include <QDialog>
 #include <QPushButton>
 #include <QLineEdit>
-#include <QGraphicsView>
 
 namespace Ui {
 class managerLogin;
