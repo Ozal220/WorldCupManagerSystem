@@ -2,7 +2,11 @@
 #define PLAYERPAGE_H
 
 #include <QWidget>
-
+#include <QSqlTableModel>
+#include <QMessagebox>
+#include <QSqlRecord>
+#include <QDebug>
+#include <QButtonGroup>
 namespace Ui {
 class playerPage;
 }
@@ -15,8 +19,29 @@ public:
     explicit playerPage(QWidget *parent = 0);
     ~playerPage();
 
+signals:
+    void unenable();
+
+public slots:
+
+    void loadTable(int buttonId);
+
+    void on_ModifRadioButton_clicked(bool checked);
+
+    void on_submitButton_clicked();
+
+    void on_addButton_clicked();
+
+    void on_deleteButton_clicked();
+
+    void enableDeleteButton();
+
+    void unenableDeleteButton();
+
 private:
+    QSqlTableModel *model = 0;
     Ui::playerPage *ui;
+    QButtonGroup *pButtonGroup = 0;
 };
 
 #endif // PLAYERPAGE_H

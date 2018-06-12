@@ -16,18 +16,21 @@ public:
     explicit TeamPage(QWidget *parent = 0);
     ~TeamPage();
 
-public slots:
+signals:
+    void unenable();
+
+private slots:
     void on_ModifRadioButton_clicked(bool checked);
 
     void on_submitButton_clicked();
 
-//    void on_pushButton_clicked();
-
-
-private slots:
     void on_addButton_clicked();
 
-//    void on_deleteButton_clicked();
+    void on_deleteButton_clicked();
+
+    void enableDeleteButton();
+
+    void unenableDeleteButton();
 
 private:
     Ui::TeamPage *ui;

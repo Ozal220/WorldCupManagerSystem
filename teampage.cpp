@@ -25,11 +25,23 @@ TeamPage::TeamPage(QWidget *parent) :
     ui->modifyTable->verticalHeader()->hide();//隐藏第一列序号
     ui->modifyTable->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
 
+    // 用槽来实现当选中一行时才enable 删除行按钮
+    ui->deleteButton->setEnabled(false);
+    connect(ui->modifyTable, SIGNAL(clicked(QModelIndex)), this, SLOT(enableDeleteButton()));
+    connect(this, SIGNAL(unenable()), this, SLOT(unenableDeleteButton()));
 }
 
 TeamPage::~TeamPage()
 {
     delete ui;
+}
+
+void TeamPage::enableDeleteButton(){
+    ui->deleteButton->setEnabled(true);
+}
+
+void TeamPage::unenableDeleteButton(){
+    ui->deleteButton->setEnabled(false);
 }
 
 void TeamPage::on_ModifRadioButton_clicked(bool checked)
@@ -51,12 +63,14 @@ void TeamPage::on_addButton_clicked()
 {
     int rowCount =  model->rowCount(); // 获得表的行数
     model->insertRow(rowCount); // 添加一行
+//    model->
+
 }
-/*
+
 void TeamPage::on_deleteButton_clicked()
 {
     // 删除操作
-    int curRow = ui->ModifRadioButton->currentIndex().row();
+    int curRow = ui->modifyTable->currentIndex().row();
     model->removeRow(curRow);
     int ok = QMessageBox::warning(this, tr( "删除当前行!"), tr( "你确定删除当前行吗?"),
                                   QMessageBox::Yes, QMessageBox::No);
@@ -69,4 +83,4 @@ void TeamPage::on_deleteButton_clicked()
     }
     emit unenable();
 }
-*/
+

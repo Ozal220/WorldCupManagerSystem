@@ -21,6 +21,7 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     ui->matchTableView->setModel(model);
     ui->matchTableView->verticalHeader()->hide();//隐藏第一列序号
     ui->matchTableView->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
+//    ui->matchTableView->
     // 用槽来实现当选中一行时才enable 删除行按钮
     ui->deleteButton->setEnabled(false);
     connect(ui->matchTableView, SIGNAL(clicked(QModelIndex)), this, SLOT(enableDeleteButton()));

@@ -13,5 +13,6 @@ int main(int argc, char *argv[])
 //    w->show();
     ManagerWindow *mWindow = new ManagerWindow();
     mWindow->show();
+
     return a.exec();
 }

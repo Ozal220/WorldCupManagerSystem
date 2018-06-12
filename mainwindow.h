@@ -34,5 +34,6 @@ signals:
 
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase db;
 };
 #endif // LOGINWINDOW_H

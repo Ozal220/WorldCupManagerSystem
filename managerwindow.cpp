@@ -7,7 +7,7 @@ ManagerWindow::ManagerWindow(QWidget *parent) :
     ui(new Ui::ManagerWindow)
 {
     ui->setupUi(this);
-
+    setFixedSize(this->width(),this->height());                     // 禁止拖动窗口大小
     // 设置互斥的button集
     QButtonGroup *pButtonGroup = new QButtonGroup();
     pButtonGroup->addButton(ui->matchDays);

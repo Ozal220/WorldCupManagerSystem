@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    db.close();
     delete ui;
 }
 
@@ -45,7 +46,7 @@ void MainWindow::reShow(){
 }
 
 bool MainWindow::connectMySql(){
-    QSqlDatabase db;
+
     db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");
     db.setDatabaseName("worldcup");
