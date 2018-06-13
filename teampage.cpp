@@ -1,5 +1,7 @@
 #include "teampage.h"
 #include "ui_teampage.h"
+#include <QTime>
+#include <QDate>
 
 TeamPage::TeamPage(QWidget *parent) :
     QWidget(parent),

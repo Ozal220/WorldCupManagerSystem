@@ -6,26 +6,32 @@ playerPage::playerPage(QWidget *parent) :
     ui(new Ui::playerPage)
 {
     ui->setupUi(this);
+    model = new QSqlTableModel(this);       //表格只有一个
 
     // 设置互斥的button集代表每一支球队
     pButtonGroup = new QButtonGroup();
 
     // 从球队表里读球队数据，
-    model = new QSqlTableModel(this);
-    model->setTable("nationalTeam");
-    model->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
-    model->select(); //查询整张表
-
+    teamModel = new QSqlTableModel(this);
+    teamModel->setTable("nationalTeam");
+    teamModel->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
+    teamModel->setSort(8, Qt::AscendingOrder); //根据分组排序，即第8列，升序排列 ,Qt::DescendingOrder为降序排序
+    teamModel->select(); //查询整张表
+    int column = 0;
+    int row = 0;
     // 有几支球队就添加多少个button, 根据teamGroup 来分到layout里
-    for(int i = 0; i < model->rowCount(); i++){
-        QPushButton *newTeam = new QPushButton();
-        newTeam->setText(model->record(i).value("TName").toString());
-        ui->buttonsLayout->addWidget(newTeam);
+    for(int i = 0; i < teamModel->rowCount(); i++){
+        column = i / 4;
+        row = i % 4;
+        QPushButton *newTeam = new QPushButton();        
+        ui->buttonGridLayout->addWidget(newTeam, row, column, 1, 1);
+        newTeam->setText(teamModel->record(i).value("TName").toString());
         pButtonGroup->addButton(newTeam, i);        // 从0开始分配id
+        newTeam->setCursor(Qt::PointingHandCursor);  // 指向手势
     }
     pButtonGroup->setExclusive(true);       //互斥
-    pButtonGroup->button(0);
-
+//    teamModel->clear();
+//    teamModel->deleteLater();
     // 每个button被点击后Model的内容就改变
     connect(pButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(loadTable(int)));
 
@@ -41,14 +47,24 @@ playerPage::~playerPage()
 }
 
 void playerPage::loadTable(int buttonId){
+    qDebug() << pButtonGroup->button(buttonId)->text();
+
     model->setTable("player");
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
     model->setFilter(QObject::tr("Nteam = '%1'").arg(pButtonGroup->button(buttonId)->text())); //根据国家队名进行筛选
+    model->setSort(1, Qt::AscendingOrder);          //根据球员号码升序排序
     model->select();
 
     ui->modifyTable->setModel(model);
     ui->modifyTable->verticalHeader()->hide();//隐藏第一列序号
     ui->modifyTable->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
+    ui->modifyTable->horizontalHeader()->setHighlightSections(true);
+
+//    QComboBox *comBox = new QComboBox();
+//    comBox->addItem(QObject::tr("female"));
+//    comBox->addItem(QObject::tr("male"));
+//    comBox->setEnabled(true);
+//    ui->modifyTable-;
 }
 
 void playerPage::enableDeleteButton(){
@@ -96,4 +112,34 @@ void playerPage::on_deleteButton_clicked()
         model->submitAll(); // 否则提交，在数据库中删除该行
     }
     emit unenable();
+}
+
+void playerPage::on_updateBotton_clicked()
+{
+    disconnect(pButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(loadTable(int)));
+    // 删除button 集
+    delete pButtonGroup;
+    pButtonGroup = new QButtonGroup(this);
+    // 从球队表里读球队数据，
+    teamModel = new QSqlTableModel(this);
+    teamModel->setTable("nationalTeam");
+    teamModel->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
+    teamModel->setSort(8, Qt::AscendingOrder); //根据分组排序，即第8列，升序排列 ,Qt::DescendingOrder为降序排序
+    teamModel->select(); //查询整张表
+    int column = 0;
+    int row = 0;
+    // 有几支球队就添加多少个button, 根据teamGroup 来分到layout里
+    for(int i = 0; i < teamModel->rowCount(); i++){
+        column = i / 4;
+        row = i % 4;
+        QPushButton *newTeam = new QPushButton();
+        ui->buttonGridLayout->addWidget(newTeam, row, column, 1, 1);
+        newTeam->setText(teamModel->record(i).value("TName").toString());
+        pButtonGroup->addButton(newTeam, i);        // 从0开始分配id
+        newTeam->setCursor(Qt::PointingHandCursor);  // 指向手势
+    }
+    pButtonGroup->setExclusive(true);       //互斥
+
+    // 每个button被点击后Model的内容就改变
+    connect(pButtonGroup, SIGNAL(buttonClicked(int)), this, SLOT(loadTable(int)));
 }

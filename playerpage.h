@@ -7,6 +7,9 @@
 #include <QSqlRecord>
 #include <QDebug>
 #include <QButtonGroup>
+#include <QList>
+#include <QComboBox>
+
 namespace Ui {
 class playerPage;
 }
@@ -38,8 +41,14 @@ public slots:
 
     void unenableDeleteButton();
 
+
+
+private slots:
+    void on_updateBotton_clicked();
+
 private:
     QSqlTableModel *model = 0;
+    QSqlTableModel *teamModel = 0;
     Ui::playerPage *ui;
     QButtonGroup *pButtonGroup = 0;
 };

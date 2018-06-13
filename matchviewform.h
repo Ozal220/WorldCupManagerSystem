@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QSqlTableModel>
 #include <QMessageBox>
+#include <QDate>
+#include <QTime>
 namespace Ui {
 class MatchViewForm;
 }
@@ -29,12 +31,21 @@ private slots:
 
     void on_addButton_clicked();
 
+    void on_revertButton_clicked();
+
+    void autoAdd();
+
+    void checkModify();
+
 signals:
     void unenable();
+    void autoAddDateTime();
 
 private:
     Ui::MatchViewForm *ui;
     QSqlTableModel *model = 0;
+    QTime Time;
+    QDate Date;
 };
 
 #endif // MATCHVIEWFORM_H

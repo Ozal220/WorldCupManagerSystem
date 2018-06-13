@@ -68,7 +68,7 @@ public:
         playerButton->setFont(font);
         playerButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon1;
-        icon1.addFile(QStringLiteral(":/new/prefix1/icons8-soccer-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral(":/new/prefix1/icons8-messi-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         playerButton->setIcon(icon1);
         playerButton->setIconSize(QSize(40, 40));
         playerButton->setCheckable(true);
@@ -82,7 +82,7 @@ public:
         teamButton->setFont(font);
         teamButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon2;
-        icon2.addFile(QStringLiteral(":/new/prefix1/icons8-user-groups-filled-50.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QStringLiteral(":/new/prefix1/icons8-strategy-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         teamButton->setIcon(icon2);
         teamButton->setIconSize(QSize(40, 40));
         teamButton->setCheckable(true);

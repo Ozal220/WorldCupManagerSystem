@@ -1,11 +1,17 @@
 #include "matchviewform.h"
 #include "ui_matchviewform.h"
+#include <QDebug>
+
 
 MatchViewForm::MatchViewForm(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::MatchViewForm)
 {
     ui->setupUi(this);
+
+    Time = QTime::fromString("20:00", "hh:mm");
+    Date = QDate::fromString("2018/06/14","yyyy/MM/dd");
+
     //将数据库中内容加载 tableView, 并设为当点击提交按钮时将tableView内容上传到数据库对应的表
     model = new QSqlTableModel(this);
     model->setTable("matches");
@@ -21,11 +27,38 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     ui->matchTableView->setModel(model);
     ui->matchTableView->verticalHeader()->hide();//隐藏第一列序号
     ui->matchTableView->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
+
 //    ui->matchTableView->
     // 用槽来实现当选中一行时才enable 删除行按钮
     ui->deleteButton->setEnabled(false);
     connect(ui->matchTableView, SIGNAL(clicked(QModelIndex)), this, SLOT(enableDeleteButton()));
+    connect(ui->matchTableView, SIGNAL(pressed(QModelIndex)), this, SLOT(checkModify()));
     connect(this, SIGNAL(unenable()), this, SLOT(unenableDeleteButton()));
+    connect(this, SIGNAL(autoAddDateTime()), this, SLOT(autoAdd()));
+}
+
+void MatchViewForm::autoAdd(){
+    qDebug() << "auto add ->";
+    // 如果编辑模式开启，并选中某一行则将其时间日期改为默认日期时间
+    int row = ui->matchTableView->currentIndex().row();
+    if(model->data(model->index(row, 4)).toString() == NULL){
+        qDebug() << "6 14";
+        model->setData(model->index(row, 4), model->data(model->index(row-1, 4)));
+    }
+
+    if(model->data(model->index(ui->matchTableView->currentIndex().row(), 5)).toString() == NULL)
+    {
+        qDebug() << "23:00";
+        model->setData(model->index(ui->matchTableView->currentIndex().row(), 5), Time);
+    }
+}
+
+void MatchViewForm::checkModify(){
+    if(ui->ModifRadioButton->isChecked()){
+        emit autoAddDateTime();
+        qDebug() << "emit ";
+    }
+
 }
 
 MatchViewForm::~MatchViewForm()
@@ -82,4 +115,9 @@ void MatchViewForm::on_addButton_clicked()
     int rowCount =  model->rowCount(); // 获得表的行数
     model->insertRow(rowCount); // 添加一行
 //    model->submitAll();// 记得提交
+}
+
+void MatchViewForm::on_revertButton_clicked()
+{
+    model->revertAll();
 }

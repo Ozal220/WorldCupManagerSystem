@@ -88,7 +88,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-soccer-48.png</normaloff>:/new/prefix1/icons8-soccer-48.png</iconset>
+      <normaloff>:/new/prefix1/icons8-messi-48.png</normaloff>:/new/prefix1/icons8-messi-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -138,7 +138,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-user-groups-filled-50.png</normaloff>:/new/prefix1/icons8-user-groups-filled-50.png</iconset>
+      <normaloff>:/new/prefix1/icons8-strategy-48.png</normaloff>:/new/prefix1/icons8-strategy-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
