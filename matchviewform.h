@@ -6,6 +6,8 @@
 #include <QMessageBox>
 #include <QDate>
 #include <QTime>
+#include <matchstaticwindow.h>
+
 namespace Ui {
 class MatchViewForm;
 }
@@ -37,13 +39,17 @@ private slots:
 
     void checkModify();
 
+    void on_staticButton_clicked();
+
 signals:
     void unenable();
     void autoAddDateTime();
+    void staticWindowClose();
 
 private:
     Ui::MatchViewForm *ui;
     QSqlTableModel *model = 0;
+    MatchStaticWindow *staticWindow = 0;
     QTime Time;
     QDate Date;
 };

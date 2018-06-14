@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QSqlTableModel>
 #include <QMessageBox>
+#include "mymodel.h"
+
 namespace Ui {
 class TeamPage;
 }

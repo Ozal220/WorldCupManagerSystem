@@ -7,8 +7,6 @@
 #include <QSqlRecord>
 #include <QDebug>
 #include <QButtonGroup>
-#include <QList>
-#include <QComboBox>
 
 namespace Ui {
 class playerPage;

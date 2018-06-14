@@ -1,7 +1,7 @@
 #include "matchviewform.h"
 #include "ui_matchviewform.h"
 #include <QDebug>
-
+#include <QSqlRecord>
 
 MatchViewForm::MatchViewForm(QWidget *parent) :
     QWidget(parent),
@@ -26,6 +26,7 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);//设置更改方式(实时更改还是条件触发更改)
     ui->matchTableView->setModel(model);
     ui->matchTableView->verticalHeader()->hide();//隐藏第一列序号
+
     ui->matchTableView->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
 
 //    ui->matchTableView->
@@ -114,10 +115,18 @@ void MatchViewForm::on_addButton_clicked()
 {
     int rowCount =  model->rowCount(); // 获得表的行数
     model->insertRow(rowCount); // 添加一行
-//    model->submitAll();// 记得提交
 }
 
 void MatchViewForm::on_revertButton_clicked()
 {
     model->revertAll();
+}
+
+void MatchViewForm::on_staticButton_clicked()
+{
+    int curRow = ui->matchTableView->currentIndex().row();
+    staticWindow = new MatchStaticWindow();
+    staticWindow->setTeam(model->record(curRow).value("主队").toString(),
+                          model->record(curRow).value("客队").toString());
+    staticWindow->show();
 }

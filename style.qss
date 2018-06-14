@@ -1,3 +1,31 @@
+/* === QTabWidget === */
+
+QTabBar::tab:hover {
+    background-color: rgb(57, 101, 148);
+    border: 1px solid #444444;
+    border-bottom: none;
+}
+
+QTabBar::tab:selected {
+    background-color: rgb(57, 101, 148);
+    color: rgb(248, 250, 255);
+}
+
+/* 表头样式*/
+QTableView {                                      /*???????*/                        /*??????*/
+    font: 12pt "黑体";
+    selection-color: white;                             /*?????????*/
+    selection-background-color: #6d819c;        /*????????*/
+    border: 2px groove gray;
+    padding-left:3px;
+}
+
+QHeaderView::section {
+    background-color:rgb(65, 110, 162);
+    color: white;
+    border: 1px solid #444f59;
+    height:32;
+}
 
 /* 按钮样式 */
 QPushButton:flat {

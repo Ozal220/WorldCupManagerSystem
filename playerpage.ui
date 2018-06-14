@@ -22,6 +22,24 @@
      <height>651</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QWidget" name="gridLayoutWidget">
    <property name="geometry">

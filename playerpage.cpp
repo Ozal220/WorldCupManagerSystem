@@ -59,12 +59,6 @@ void playerPage::loadTable(int buttonId){
     ui->modifyTable->verticalHeader()->hide();//隐藏第一列序号
     ui->modifyTable->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
     ui->modifyTable->horizontalHeader()->setHighlightSections(true);
-
-//    QComboBox *comBox = new QComboBox();
-//    comBox->addItem(QObject::tr("female"));
-//    comBox->addItem(QObject::tr("male"));
-//    comBox->setEnabled(true);
-//    ui->modifyTable-;
 }
 
 void playerPage::enableDeleteButton(){

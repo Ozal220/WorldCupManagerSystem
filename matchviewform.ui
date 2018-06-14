@@ -85,6 +85,16 @@
      </widget>
     </item>
     <item>
+     <widget class="QPushButton" name="staticButton">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="text">
+       <string>数据统计</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QPushButton" name="deleteButton">
       <property name="enabled">
        <bool>true</bool>

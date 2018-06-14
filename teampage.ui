@@ -22,6 +22,27 @@
      <height>761</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="dragEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::CustomDashLine</enum>
+   </property>
+   <property name="sortingEnabled">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QRadioButton" name="ModifRadioButton">
    <property name="geometry">

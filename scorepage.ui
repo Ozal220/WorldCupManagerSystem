@@ -6,31 +6,759 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1010</width>
-    <height>680</height>
+    <width>1181</width>
+    <height>801</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_2">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>310</y>
-     <width>141</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1181</width>
+     <height>801</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>黑体</family>
-     <pointsize>12</pointsize>
-    </font>
+   <property name="currentIndex">
+    <number>0</number>
    </property>
-   <property name="text">
-    <string>未添加积分榜</string>
-   </property>
+   <widget class="QWidget" name="ABgroup">
+    <attribute name="title">
+     <string>A-B组</string>
+    </attribute>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 B组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitB">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="BtableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>480</y>
+       <width>1181</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="dragDropOverwriteMode">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>15</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 A组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitA">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="AtableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>1181</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::DefaultContextMenu</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertA">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertB">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>C-D组</string>
+    </attribute>
+    <widget class="QTableView" name="DtableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>480</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>15</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 C组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitD">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>700</y>
+       <width>90</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 D组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitC">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="CtableView">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertC">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertD">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>E-F组</string>
+    </attribute>
+    <widget class="QTableView" name="FtableView_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>480</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>15</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 E组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitF">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 F组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitE">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="EtableView_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertE">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertF">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>G-H组</string>
+    </attribute>
+    <widget class="QTableView" name="HtableView_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>480</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>15</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 G组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitH">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>400</y>
+       <width>1181</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>小组赛 H组</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::LinksAccessibleByMouse</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="submitG">
+     <property name="geometry">
+      <rect>
+       <x>1080</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>提交修改</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="GtableView_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>1181</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>黑体</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::IgnoreAction</enum>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="textElideMode">
+      <enum>Qt::ElideMiddle</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::NoPen</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertG">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>300</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="revertH">
+     <property name="geometry">
+      <rect>
+       <x>980</x>
+       <y>700</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>撤回更改</string>
+     </property>
+    </widget>
+   </widget>
   </widget>
  </widget>
  <resources/>

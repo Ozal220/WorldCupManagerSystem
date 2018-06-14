@@ -31,7 +31,9 @@ SOURCES += main.cpp \
     playerpage.cpp \
     teampage.cpp \
     scorepage.cpp \
-    stadiumpage.cpp
+    stadiumpage.cpp \
+    mymodel.cpp \
+    matchstaticwindow.cpp
 
 HEADERS  += \
     managerlogin.h \
@@ -43,7 +45,9 @@ HEADERS  += \
     playerpage.h \
     teampage.h \
     scorepage.h \
-    stadiumpage.h
+    stadiumpage.h \
+    mymodel.h \
+    matchstaticwindow.h
 
 FORMS    += \
     managerlogin.ui \
@@ -53,7 +57,8 @@ FORMS    += \
     playerpage.ui \
     teampage.ui \
     scorepage.ui \
-    stadiumpage.ui
+    stadiumpage.ui \
+    matchstaticwindow.ui
 
 RESOURCES += \
     resourse.qrc

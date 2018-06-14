@@ -42,7 +42,7 @@ void MainWindow::closeManagerLogin()
 }
 
 void MainWindow::reShow(){
-    this->setVisible(true);
+    this->show();
 }
 
 bool MainWindow::connectMySql(){
