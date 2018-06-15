@@ -2,7 +2,7 @@
 #define MATCHSTATICWINDOW_H
 
 #include <QWidget>
-#include <QSqlTableModel>
+#include <QSqlQueryModel>
 namespace Ui {
 class MatchStaticWindow;
 }
@@ -23,9 +23,20 @@ private slots:
 
     void on_players_1_clicked();
 
+    void on_players_2_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MatchStaticWindow *ui;
-    QSqlTableModel *model = 0;
+    QSqlQueryModel *model = 0;
+    QSqlQueryModel *model_2 = 0;
+    int goallerCount_1 = 0;
+    int goallerCount_2 = 0;
 };
 
 #endif // MATCHSTATICWINDOW_H

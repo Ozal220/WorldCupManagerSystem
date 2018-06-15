@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1177</width>
-    <height>477</height>
+    <width>1010</width>
+    <height>515</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>382</x>
+     <x>192</x>
      <y>100</y>
      <width>141</width>
      <height>28</height>
@@ -35,7 +35,7 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>430</x>
      <y>100</y>
      <width>141</width>
      <height>28</height>
@@ -48,8 +48,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>220</y>
+     <x>350</x>
+     <y>320</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -79,8 +79,8 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>300</y>
+     <x>350</x>
+     <y>400</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -110,8 +110,8 @@
   <widget class="QSpinBox" name="yellow_1">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>220</y>
+     <x>280</x>
+     <y>320</y>
      <width>55</width>
      <height>26</height>
     </rect>
@@ -134,8 +134,8 @@
   <widget class="QSpinBox" name="red_1">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>300</y>
+     <x>280</x>
+     <y>400</y>
      <width>55</width>
      <height>26</height>
     </rect>
@@ -158,8 +158,8 @@
   <widget class="QSpinBox" name="yellow_2">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>220</y>
+     <x>430</x>
+     <y>320</y>
      <width>55</width>
      <height>26</height>
     </rect>
@@ -194,8 +194,8 @@
   <widget class="QSpinBox" name="red_2">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>300</y>
+     <x>430</x>
+     <y>400</y>
      <width>55</width>
      <height>26</height>
     </rect>
@@ -227,20 +227,10 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>251</width>
-     <height>481</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QTableView" name="tableView_2">
    <property name="geometry">
     <rect>
-     <x>930</x>
+     <x>760</x>
      <y>0</y>
      <width>250</width>
      <height>481</height>
@@ -250,7 +240,7 @@
   <widget class="QLabel" name="team_1">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>10</x>
      <y>40</y>
      <width>251</width>
      <height>25</height>
@@ -274,7 +264,7 @@
   <widget class="QLabel" name="team_2">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>510</x>
      <y>40</y>
      <width>251</width>
      <height>25</height>
@@ -298,7 +288,7 @@
   <widget class="QSpinBox" name="goal_1">
    <property name="geometry">
     <rect>
-     <x>466</x>
+     <x>276</x>
      <y>40</y>
      <width>55</width>
      <height>26</height>
@@ -322,7 +312,7 @@
   <widget class="QSpinBox" name="goal_2">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>430</x>
      <y>40</y>
      <width>55</width>
      <height>26</height>
@@ -355,7 +345,102 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resourse.qrc">:/new/prefix1/icons8-soccer-ball-64.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>145</x>
+     <y>150</y>
+     <width>191</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>150</y>
+     <width>191</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>黑体</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>480</y>
+     <width>91</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>选择该球员</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>480</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>选择该球员</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>480</y>
+     <width>61</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>收起</string>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resourse.qrc"/>
+ </resources>
  <connections/>
 </ui>
