@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QSqlQueryModel>
+
 namespace Ui {
 class MatchStaticWindow;
 }
@@ -12,8 +13,9 @@ class MatchStaticWindow : public QWidget
     Q_OBJECT
 
 public:
-    explicit MatchStaticWindow(QWidget *parent = 0);
-    void setTeam(QString team_1, QString team_2);
+    explicit MatchStaticWindow(QString session, QString team_1, QString team_2, QWidget *parent = 0);
+    inline void setTeam(QString team_1, QString team_2);
+    inline void setSession(QString session);
     ~MatchStaticWindow();
 
 private slots:
@@ -35,6 +37,7 @@ private:
     Ui::MatchStaticWindow *ui;
     QSqlQueryModel *model = 0;
     QSqlQueryModel *model_2 = 0;
+    QString thisSession;
     int goallerCount_1 = 0;
     int goallerCount_2 = 0;
 };

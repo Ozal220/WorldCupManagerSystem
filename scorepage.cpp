@@ -90,3 +90,89 @@ void scorePage::on_revertA_clicked()
 {
     model_A->revertAll();
 }
+
+void scorePage::on_revertB_clicked()
+{
+    model_B->revertAll();
+}
+
+void scorePage::on_submitB_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_B->submitAll();
+    }
+}
+
+void scorePage::on_revertC_clicked()
+{
+    model_C->revertAll();
+}
+
+void scorePage::on_submitC_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_C->submitAll();
+    }
+}
+
+void scorePage::on_revertD_clicked()
+{
+    model_D->revertAll();
+}
+
+void scorePage::on_submitD_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_D->submitAll();
+    }
+}
+
+void scorePage::on_submitF_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_F->submitAll();
+    }
+}
+
+void scorePage::on_submitH_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_H->submitAll();
+    }
+}
+
+void scorePage::on_revertE_clicked()
+{
+    model_E->revertAll();
+}
+
+
+void scorePage::on_submitE_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_E->submitAll();
+    }
+}
+
+void scorePage::on_revertF_clicked()
+{
+    model_E->revertAll();
+}
+
+
+void scorePage::on_revertG_clicked()
+{
+    model_G->revertAll();
+}
+
+void scorePage::on_submitG_clicked()
+{
+    if(QMessageBox::Yes == QMessageBox::warning(this,"提示","确定更新数据库？",QMessageBox::No,QMessageBox::Yes)){
+        model_G->submitAll();
+    }
+}
+
+void scorePage::on_revertH_clicked()
+{
+    model_H->revertAll();
+}

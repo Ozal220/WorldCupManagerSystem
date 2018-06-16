@@ -24,6 +24,34 @@ private slots:
 
     void on_revertA_clicked();
 
+    void on_revertB_clicked();
+
+    void on_submitB_clicked();
+
+    void on_revertC_clicked();
+
+    void on_submitC_clicked();
+
+    void on_revertD_clicked();
+
+    void on_submitD_clicked();
+
+    void on_submitF_clicked();
+
+    void on_submitH_clicked();
+
+    void on_revertE_clicked();
+
+    void on_submitE_clicked();
+
+    void on_revertF_clicked();
+
+    void on_revertG_clicked();
+
+    void on_submitG_clicked();
+
+    void on_revertH_clicked();
+
 private:
     Ui::scorePage *ui;
     QSqlTableModel *groupModel = 0;

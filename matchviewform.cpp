@@ -26,10 +26,8 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);//设置更改方式(实时更改还是条件触发更改)
     ui->matchTableView->setModel(model);
     ui->matchTableView->verticalHeader()->hide();//隐藏第一列序号
-
     ui->matchTableView->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
 
-//    ui->matchTableView->
     // 用槽来实现当选中一行时才enable 删除行按钮
     ui->deleteButton->setEnabled(false);
     connect(ui->matchTableView, SIGNAL(clicked(QModelIndex)), this, SLOT(enableDeleteButton()));
@@ -125,8 +123,11 @@ void MatchViewForm::on_revertButton_clicked()
 void MatchViewForm::on_staticButton_clicked()
 {
     int curRow = ui->matchTableView->currentIndex().row();
-    staticWindow = new MatchStaticWindow();
-    staticWindow->setTeam(model->record(curRow).value("主队").toString(),
-                          model->record(curRow).value("客队").toString());
+    QString session = model->record(curRow).value("session").toString();
+    qDebug() << "statick cliced: " << session;
+    QString team_1 = model->record(curRow).value("主队").toString();
+    QString team_2 = model->record(curRow).value("客队").toString();
+    staticWindow = new MatchStaticWindow(session, team_1, team_2);
     staticWindow->show();
+    model->setData(model->index(curRow, 6), "已结束");
 }
