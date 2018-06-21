@@ -17,6 +17,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,10 +26,11 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QPushButton *fansButton;
-    QPushButton *managerButton;
     QLabel *connectLable;
-    QLabel *image;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *managerButton;
+    QPushButton *fansButton;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -38,28 +40,56 @@ public:
         MainWindow->setMouseTracking(true);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        fansButton = new QPushButton(centralWidget);
-        fansButton->setObjectName(QStringLiteral("fansButton"));
-        fansButton->setGeometry(QRect(90, 270, 401, 41));
-        fansButton->setStyleSheet(QString::fromUtf8("font: 75 11pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
-"selection-color: rgb(223, 223, 223);"));
-        managerButton = new QPushButton(centralWidget);
-        managerButton->setObjectName(QStringLiteral("managerButton"));
-        managerButton->setGeometry(QRect(90, 140, 401, 41));
-        managerButton->setAutoFillBackground(true);
-        managerButton->setStyleSheet(QString::fromUtf8("alternate-background-color: rgb(148, 148, 148);\n"
-"\n"
-"font: 11pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
-"selection-background-color: rgb(76, 76, 76);"));
         connectLable = new QLabel(centralWidget);
         connectLable->setObjectName(QStringLiteral("connectLable"));
         connectLable->setGeometry(QRect(460, 360, 121, 20));
         connectLable->setStyleSheet(QLatin1String("\n"
 "color: rgb(104, 104, 104);"));
-        image = new QLabel(centralWidget);
-        image->setObjectName(QStringLiteral("image"));
-        image->setGeometry(QRect(40, 40, 72, 15));
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(0, 0, 601, 401));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(0);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(100, 0, 100, 0);
+        managerButton = new QPushButton(verticalLayoutWidget);
+        managerButton->setObjectName(QStringLiteral("managerButton"));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(11);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        managerButton->setFont(font);
+        managerButton->setCursor(QCursor(Qt::PointingHandCursor));
+        managerButton->setAutoFillBackground(true);
+        managerButton->setStyleSheet(QString::fromUtf8("alternate-background-color: rgb(148, 148, 148);\n"
+"\n"
+"font: 11pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"selection-background-color: rgb(76, 76, 76);"));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/icons8-sql-database-administrators-group-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        managerButton->setIcon(icon);
+        managerButton->setIconSize(QSize(50, 50));
+
+        verticalLayout->addWidget(managerButton);
+
+        fansButton = new QPushButton(verticalLayoutWidget);
+        fansButton->setObjectName(QStringLiteral("fansButton"));
+        fansButton->setCursor(QCursor(Qt::PointingHandCursor));
+        fansButton->setStyleSheet(QString::fromUtf8("font: 75 11pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";\n"
+"selection-color: rgb(223, 223, 223);"));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/icons8-soccer-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        fansButton->setIcon(icon1);
+        fansButton->setIconSize(QSize(50, 50));
+
+        verticalLayout->addWidget(fansButton);
+
         MainWindow->setCentralWidget(centralWidget);
+        verticalLayoutWidget->raise();
+        connectLable->raise();
 
         retranslateUi(MainWindow);
 
@@ -69,10 +99,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        connectLable->setText(QApplication::translate("MainWindow", "\346\225\260\346\215\256\345\272\223\346\255\243\345\234\250\350\277\236\346\216\245...", Q_NULLPTR));
+        managerButton->setText(QApplication::translate("MainWindow", "  \346\210\221\346\230\257\350\256\260\345\275\225\345\221\230", Q_NULLPTR));
         fansButton->setText(QApplication::translate("MainWindow", "\346\210\221\346\230\257\347\220\203\350\277\267", Q_NULLPTR));
-        managerButton->setText(QApplication::translate("MainWindow", "\346\210\221\346\230\257\350\256\260\345\275\225\345\221\230", Q_NULLPTR));
-        connectLable->setText(QApplication::translate("MainWindow", "\346\225\260\346\215\256\345\272\223\345\267\262\345\234\250\350\277\236\346\216\245...", Q_NULLPTR));
-        image->setText(QApplication::translate("MainWindow", "image", Q_NULLPTR));
     } // retranslateUi
 
 };

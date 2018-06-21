@@ -7,15 +7,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setFixedSize(this->width(),this->height());                     // 禁止拖动窗口大小
+    this->setWindowFlags(Qt::FramelessWindowHint);
     setWindowTitle("World Cup!");
     setWindowIcon(QIcon("icon.ico"));
     ui->connectLable->setVisible(false);
     setWindowFlags(Qt::WindowStaysOnTopHint);
-    QPixmap pixmap("icon-worldCup");
-    ui->image->setPixmap(pixmap);
-    ui->image->setFixedSize(50, 50);
-    ui->image->setScaledContents(true);
-
+    // 加载QSS样式
+    CommonHelper::setStyle("style.qss");
     connectMySql();
 }
 
@@ -25,10 +24,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_fansButton_clicked(){
+    this->hide();//主界面隐藏
+    fansWin = new fansWindow();
+    fansWin->show();
+}
+
 void MainWindow::on_managerButton_clicked()
 {
     this->setVisible(false);//主界面隐藏
-    mLogin = new managerLogin(this);
+    mLogin = new managerLogin();
     connect(mLogin, SIGNAL(ShowSignal()), this, SLOT(reShow()));
     connect(mLogin, SIGNAL(ManagerLoginSignal()), this, SLOT(closeManagerLogin()));
     mLogin->show();
@@ -36,8 +41,8 @@ void MainWindow::on_managerButton_clicked()
 
 void MainWindow::closeManagerLogin()
 {
-    mLogin->close();
-    mWindow = new ManagerWindow(this);
+//    mLogin->close();
+    mWindow = new ManagerWindow();
     mWindow->show();
 }
 

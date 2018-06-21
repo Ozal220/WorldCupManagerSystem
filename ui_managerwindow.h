@@ -52,7 +52,7 @@ public:
         label->setStyleSheet(QStringLiteral("background-color: rgb(65, 110, 162);"));
         pStackedWidget = new QStackedWidget(centralwidget);
         pStackedWidget->setObjectName(QStringLiteral("pStackedWidget"));
-        pStackedWidget->setGeometry(QRect(9, 88, 1180, 801));
+        pStackedWidget->setGeometry(QRect(-2, 80, 1201, 821));
         playerButton = new QPushButton(centralwidget);
         playerButton->setObjectName(QStringLiteral("playerButton"));
         playerButton->setGeometry(QRect(0, 30, 240, 49));

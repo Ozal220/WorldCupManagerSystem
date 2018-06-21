@@ -12,6 +12,54 @@ scorePage::scorePage(QWidget *parent) :
 
 }
 
+void scorePage::setButtonsHide(){
+    ui->revertA->hide();
+    ui->revertB->hide();
+    ui->revertC->hide();
+    ui->revertD->hide();
+    ui->revertE->hide();
+    ui->revertF->hide();
+    ui->revertG->hide();
+    ui->revertH->hide();
+
+    ui->submitA->hide();
+    ui->submitB->hide();
+    ui->submitC->hide();
+    ui->submitD->hide();
+    ui->submitE->hide();
+    ui->submitF->hide();
+    ui->submitG->hide();
+    ui->submitH->hide();
+}
+
+void scorePage::setAllEditStrategy(QSqlTableModel::EditStrategy strategy){
+    model_A->setEditStrategy(strategy);
+    model_B->setEditStrategy(strategy);
+}
+
+void scorePage::setAllEditTriggers(QAbstractItemView::EditTrigger triggers){
+    ui->AtableView->setEditTriggers(triggers);
+    ui->BtableView->setEditTriggers(triggers);
+    ui->CtableView->setEditTriggers(triggers);
+    ui->DtableView->setEditTriggers(triggers);
+
+    ui->EtableView_4->setEditTriggers(triggers);
+    ui->FtableView_4->setEditTriggers(triggers);
+    ui->GtableView_5->setEditTriggers(triggers);
+    ui->HtableView_5->setEditTriggers(triggers);
+}
+
+void scorePage::setAllselectionBehavior(QAbstractItemView::SelectionBehavior behavior){
+    ui->AtableView->setSelectionBehavior(behavior);
+    ui->BtableView->setSelectionBehavior(behavior);
+    ui->CtableView->setSelectionBehavior(behavior);
+    ui->DtableView->setSelectionBehavior(behavior);
+    ui->EtableView_4->setSelectionBehavior(behavior);
+    ui->FtableView_4->setSelectionBehavior(behavior);
+    ui->GtableView_5->setSelectionBehavior(behavior);
+    ui->HtableView_5->setSelectionBehavior(behavior);
+}
+
 void scorePage::setTable(const QChar groupName){
     // 从球队表里读球队数据，
 //    QSqlTableModel *groupModel = new QSqlTableModel(this);
@@ -19,7 +67,7 @@ void scorePage::setTable(const QChar groupName){
     groupModel = new QSqlTableModel(this);
     groupModel->setTable("nationalTeam");
     groupModel->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
-    groupModel->setSort(8, Qt::AscendingOrder); //根据分组排序，即第8列，升序排列 ,Qt::DescendingOrder为降序排序
+    groupModel->setSort(7, Qt::DescendingOrder); //根据分组排序，即第8列，升序排列 ,Qt::DescendingOrder为降序排序
     groupModel->setFilter(QObject::tr("teamGroup = '%1'").arg(groupName)); //根据国家队名进行筛选
     groupModel->select(); //查询整张表
     if(groupName == 'A'){

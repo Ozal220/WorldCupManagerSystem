@@ -1,3 +1,26 @@
+QTextBrowser {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+QSpinBox {
+        border-radius: 5px;
+        height: 25px;
+        border: 2px solid #84B1ED;
+        background: rgba(0, 0, 0,0);
+}
+
+QLineEdit {
+    border: 2px solid #84B1ED;
+    border-radius: 4px;
+    height: 25px;
+    background: white;
+}
+
+QLineEdit:hover {
+    border: 2px solid #4F86C6;
+}
+
 /* === QTabWidget === */
 
 QTabBar::tab:hover {
@@ -19,7 +42,12 @@ QTableView {                                      /*???????*/                   
     border: 2px groove gray;
     padding-left:3px;
 }
-
+/*
+QTableView::item:hover {
+    background: #6d819c;
+    color: white;
+}
+*/
 QHeaderView::section {
     background-color:rgb(65, 110, 162);
     color: white;

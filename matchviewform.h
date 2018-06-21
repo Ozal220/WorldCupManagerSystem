@@ -7,7 +7,8 @@
 #include <QDate>
 #include <QTime>
 #include <matchstaticwindow.h>
-
+#include <staticforfans.h>
+#include <QMap>
 namespace Ui {
 class MatchViewForm;
 }
@@ -18,6 +19,7 @@ class MatchViewForm : public QWidget
 
 public:
     explicit MatchViewForm(QWidget *parent = 0);
+    void setVisitorMode();
     ~MatchViewForm();
 
 private slots:
@@ -41,6 +43,8 @@ private slots:
 
     void on_staticButton_clicked();
 
+    void on_visitorButton_clicked();
+
 signals:
     void unenable();
     void autoAddDateTime();
@@ -50,6 +54,7 @@ private:
     Ui::MatchViewForm *ui;
     QSqlTableModel *model = 0;
     MatchStaticWindow *staticWindow = 0;
+    staticForFans *fansStatic = 0;
     QTime Time;
     QDate Date;
 };

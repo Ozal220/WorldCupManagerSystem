@@ -6,6 +6,7 @@
 #include <QMessagebox>
 #include <QDebug>
 #include "mymodel.h"
+#include <QAbstractItemView>
 
 namespace Ui {
 class scorePage;
@@ -17,6 +18,10 @@ class scorePage : public QWidget
 
 public:
     explicit scorePage(QWidget *parent = 0);
+    void setButtonsHide();
+    void setAllEditStrategy(QSqlTableModel::EditStrategy strategy);  //设置保存策略
+    void setAllselectionBehavior(QAbstractItemView::SelectionBehavior Behavior);
+    void setAllEditTriggers(QAbstractItemView::EditTrigger triggers);
     ~scorePage();
 
 private slots:

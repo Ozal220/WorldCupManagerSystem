@@ -11,7 +11,6 @@
         <file>icons8-user-groups-filled-50.png</file>
         <file>icons8-soccer-ball-64.png</file>
         <file>icons8-soccer-yellow-card-48.png</file>
-        <file>icons8-germany-48.png</file>
         <file>icons8-messi-48.png</file>
         <file>icons8-sql-database-administrators-group-48.png</file>
         <file>icons8-staff-48.png</file>
@@ -19,5 +18,37 @@
         <file>icons8-people-filled-50.png</file>
         <file>icons8-people-filled-50 (1).png</file>
         <file>icons8-people-filled-50 (2).png</file>
+        <file>australia.png</file>
+        <file>belgium.png</file>
+        <file>brazil.png</file>
+        <file>colombia.png</file>
+        <file>costa-rica.png</file>
+        <file>denmark.png</file>
+        <file>egypt.png</file>
+        <file>england.png</file>
+        <file>france.png</file>
+        <file>germany.png</file>
+        <file>iceland.png</file>
+        <file>icons8-germany-48.png</file>
+        <file>iran.png</file>
+        <file>japan.png</file>
+        <file>monaco.png</file>
+        <file>panama.png</file>
+        <file>peru.png</file>
+        <file>poland.png</file>
+        <file>portugal.png</file>
+        <file>russian.png</file>
+        <file>south-korea.png</file>
+        <file>spain.png</file>
+        <file>sweden.png</file>
+        <file>uruguay.png</file>
+        <file>icons8-find-user-male-48.png</file>
+        <file>icons8-find-user-male-96.png</file>
+        <file>icons8-google-web-search-32.png</file>
+        <file>icons8-classroom-48.png</file>
+        <file>icons8-gold-medal-48.png</file>
+        <file>icons8-leaderboard-16.png</file>
+        <file>icons8-medal-first-place-64.png</file>
+        <file>icons8-teams-48.png</file>
     </qresource>
 </RCC>

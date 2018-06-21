@@ -33,7 +33,11 @@ SOURCES += main.cpp \
     scorepage.cpp \
     stadiumpage.cpp \
     mymodel.cpp \
-    matchstaticwindow.cpp
+    matchstaticwindow.cpp \
+    fanswindow.cpp \
+    staticforfans.cpp \
+    searchmessage.cpp \
+    themvps.cpp
 
 HEADERS  += \
     managerlogin.h \
@@ -47,7 +51,11 @@ HEADERS  += \
     scorepage.h \
     stadiumpage.h \
     mymodel.h \
-    matchstaticwindow.h
+    matchstaticwindow.h \
+    fanswindow.h \
+    staticforfans.h \
+    searchmessage.h \
+    themvps.h
 
 FORMS    += \
     managerlogin.ui \
@@ -58,7 +66,11 @@ FORMS    += \
     teampage.ui \
     scorepage.ui \
     stadiumpage.ui \
-    matchstaticwindow.ui
+    matchstaticwindow.ui \
+    fanswindow.ui \
+    staticforfans.ui \
+    searchmessage.ui \
+    themvps.ui
 
 RESOURCES += \
     resourse.qrc

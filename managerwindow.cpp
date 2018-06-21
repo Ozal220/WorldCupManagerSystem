@@ -1,7 +1,7 @@
 #include "managerwindow.h"
 #include "ui_managerwindow.h"
 #include <QVBoxLayout>
-#include "qss.h"
+
 ManagerWindow::ManagerWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ManagerWindow)
@@ -18,8 +18,7 @@ ManagerWindow::ManagerWindow(QWidget *parent) :
     pButtonGroup->addButton(ui->stadiumButton);
     pButtonGroup->setExclusive(true);       //互斥
 
-    // 加载QSS样式
-    CommonHelper::setStyle("style.qss");
+
     ui->matchDays->setFlat(true);
     ui->teamButton->setFlat(true);
     ui->score->setFlat(true);

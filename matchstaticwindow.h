@@ -14,8 +14,9 @@ class MatchStaticWindow : public QWidget
 
 public:
     explicit MatchStaticWindow(QString session, QString team_1, QString team_2, QWidget *parent = 0);
-    inline void setTeam(QString team_1, QString team_2);
-    inline void setSession(QString session);
+    void setTeam(QString team_1, QString team_2);
+    void setSession(QString session);
+    void setVisitorMode();
     ~MatchStaticWindow();
 
 private slots:
@@ -33,13 +34,18 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_4_clicked();
+
 private:
     Ui::MatchStaticWindow *ui;
     QSqlQueryModel *model = 0;
     QSqlQueryModel *model_2 = 0;
-    QString thisSession;
     int goallerCount_1 = 0;
     int goallerCount_2 = 0;
+    QMap<QString, QString> *map = 0;
+    QString thisSession;
+    QString thisTeam_1;
+    QString thisTeam_2;
 };
 
 #endif // MATCHSTATICWINDOW_H

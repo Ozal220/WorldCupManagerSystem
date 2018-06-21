@@ -6,6 +6,8 @@
 #include <QDebug>
 #include "managerlogin.h"
 #include "managerwindow.h"
+#include "fanswindow.h"
+#include "qss.h"
 
 namespace Ui {
 class MainWindow;
@@ -21,9 +23,11 @@ public:
     ~MainWindow();
     managerLogin *mLogin = 0;
     ManagerWindow *mWindow = 0;
+    fansWindow *fansWin = 0;
 
 private slots:
     void on_managerButton_clicked();
+    void on_fansButton_clicked();
     void closeManagerLogin();
     void reShow();
 

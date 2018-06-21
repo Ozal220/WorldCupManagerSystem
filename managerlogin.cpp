@@ -28,7 +28,7 @@ managerLogin::~managerLogin()
 void managerLogin::on_returnButton_clicked()
 {
     emit ShowSignal();
-//    this->close();
+    this->close();
 }
 
 void managerLogin::enableLoginButton(const QString& psw){

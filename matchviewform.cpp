@@ -8,6 +8,7 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     ui(new Ui::MatchViewForm)
 {
     ui->setupUi(this);
+    ui->visitorButton->hide();
 
     Time = QTime::fromString("20:00", "hh:mm");
     Date = QDate::fromString("2018/06/14","yyyy/MM/dd");
@@ -17,7 +18,7 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     model->setTable("matches");
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);  //设置保存策略
     model->select(); //查询整张表
-    model->setHeaderData(0, Qt::Horizontal, tr("场次")); //更改列名 // 多表操作用 model->setQuery(sql 语句);
+    model->setHeaderData(0, Qt::Horizontal, tr("场次")); //更改列名
     model->setHeaderData(1, Qt::Horizontal, tr("主队"));
     model->setHeaderData(2, Qt::Horizontal, tr("客队"));
     model->setHeaderData(3, Qt::Horizontal, tr("场馆"));
@@ -28,12 +29,24 @@ MatchViewForm::MatchViewForm(QWidget *parent) :
     ui->matchTableView->verticalHeader()->hide();//隐藏第一列序号
     ui->matchTableView->setEditTriggers(QAbstractItemView::NoEditTriggers); //设置不可编辑
 
-    // 用槽来实现当选中一行时才enable 删除行按钮
+    // 用槽来实现当选中一行时才 enable 删除行按钮
     ui->deleteButton->setEnabled(false);
     connect(ui->matchTableView, SIGNAL(clicked(QModelIndex)), this, SLOT(enableDeleteButton()));
     connect(ui->matchTableView, SIGNAL(pressed(QModelIndex)), this, SLOT(checkModify()));
     connect(this, SIGNAL(unenable()), this, SLOT(unenableDeleteButton()));
     connect(this, SIGNAL(autoAddDateTime()), this, SLOT(autoAdd()));
+}
+
+void MatchViewForm::setVisitorMode(){
+    //隐藏除了查看比赛信息外的其他按钮
+    ui->addButton->hide();
+    ui->deleteButton->hide();
+    ui->revertButton->hide();
+    ui->ModifRadioButton->hide();
+    ui->submitButton->hide();
+    ui->staticButton->hide();
+    //显示visitor按钮
+    ui->visitorButton->show();
 }
 
 void MatchViewForm::autoAdd(){
@@ -124,10 +137,19 @@ void MatchViewForm::on_staticButton_clicked()
 {
     int curRow = ui->matchTableView->currentIndex().row();
     QString session = model->record(curRow).value("session").toString();
-    qDebug() << "statick cliced: " << session;
     QString team_1 = model->record(curRow).value("主队").toString();
     QString team_2 = model->record(curRow).value("客队").toString();
     staticWindow = new MatchStaticWindow(session, team_1, team_2);
     staticWindow->show();
     model->setData(model->index(curRow, 6), "已结束");
+}
+
+void MatchViewForm::on_visitorButton_clicked()
+{
+    int curRow = ui->matchTableView->currentIndex().row();
+    QString session = model->record(curRow).value("session").toString();
+    QString team_1 = model->record(curRow).value("主队").toString();
+    QString team_2 = model->record(curRow).value("客队").toString();
+    fansStatic = new staticForFans(session, team_1, team_2);
+    fansStatic->show();
 }
