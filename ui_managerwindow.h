@@ -68,7 +68,7 @@ public:
         playerButton->setFont(font);
         playerButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon1;
-        icon1.addFile(QStringLiteral(":/new/prefix1/icons8-messi-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral(":/new/prefix1/image/icons8-messi-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         playerButton->setIcon(icon1);
         playerButton->setIconSize(QSize(40, 40));
         playerButton->setCheckable(true);
@@ -82,7 +82,7 @@ public:
         teamButton->setFont(font);
         teamButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon2;
-        icon2.addFile(QStringLiteral(":/new/prefix1/icons8-strategy-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QStringLiteral(":/new/prefix1/image/icons8-strategy-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         teamButton->setIcon(icon2);
         teamButton->setIconSize(QSize(40, 40));
         teamButton->setCheckable(true);
@@ -98,7 +98,7 @@ public:
         matchDays->setAutoFillBackground(false);
         matchDays->setStyleSheet(QStringLiteral(""));
         QIcon icon3;
-        icon3.addFile(QStringLiteral(":/new/prefix1/icons8-stadium-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QStringLiteral(":/new/prefix1/image/icons8-stadium-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         matchDays->setIcon(icon3);
         matchDays->setIconSize(QSize(40, 40));
         matchDays->setCheckable(true);
@@ -112,7 +112,7 @@ public:
         stadiumButton->setFont(font);
         stadiumButton->setCursor(QCursor(Qt::PointingHandCursor));
         QIcon icon4;
-        icon4.addFile(QStringLiteral(":/new/prefix1/icons8-performance-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QStringLiteral(":/new/prefix1/image/icons8-performance-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         stadiumButton->setIcon(icon4);
         stadiumButton->setIconSize(QSize(40, 40));
         stadiumButton->setCheckable(true);
@@ -126,7 +126,7 @@ public:
         score->setCursor(QCursor(Qt::PointingHandCursor));
         score->setStyleSheet(QStringLiteral(""));
         QIcon icon5;
-        icon5.addFile(QStringLiteral(":/new/prefix1/icons8-scoreboard-48.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QStringLiteral(":/new/prefix1/image/icons8-scoreboard-48.png"), QSize(), QIcon::Normal, QIcon::Off);
         score->setIcon(icon5);
         score->setIconSize(QSize(40, 40));
         score->setCheckable(true);

@@ -14,7 +14,7 @@
    <string>世界杯数据管理</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resourse.qrc">
+   <iconset>
     <normaloff>:/new/prefix1/icon.ico</normaloff>:/new/prefix1/icon.ico</iconset>
   </property>
   <property name="styleSheet">
@@ -88,7 +88,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-messi-48.png</normaloff>:/new/prefix1/icons8-messi-48.png</iconset>
+      <normaloff>:/new/prefix1/image/icons8-messi-48.png</normaloff>:/new/prefix1/image/icons8-messi-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -138,7 +138,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-strategy-48.png</normaloff>:/new/prefix1/icons8-strategy-48.png</iconset>
+      <normaloff>:/new/prefix1/image/icons8-strategy-48.png</normaloff>:/new/prefix1/image/icons8-strategy-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -191,7 +191,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-stadium-48.png</normaloff>:/new/prefix1/icons8-stadium-48.png</iconset>
+      <normaloff>:/new/prefix1/image/icons8-stadium-48.png</normaloff>:/new/prefix1/image/icons8-stadium-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -241,7 +241,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-performance-48.png</normaloff>:/new/prefix1/icons8-performance-48.png</iconset>
+      <normaloff>:/new/prefix1/image/icons8-performance-48.png</normaloff>:/new/prefix1/image/icons8-performance-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -288,7 +288,7 @@
     </property>
     <property name="icon">
      <iconset resource="resourse.qrc">
-      <normaloff>:/new/prefix1/icons8-scoreboard-48.png</normaloff>:/new/prefix1/icons8-scoreboard-48.png</iconset>
+      <normaloff>:/new/prefix1/image/icons8-scoreboard-48.png</normaloff>:/new/prefix1/image/icons8-scoreboard-48.png</iconset>
     </property>
     <property name="iconSize">
      <size>

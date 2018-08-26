@@ -1,1 +1,0 @@
-Author : Ozel Rixat

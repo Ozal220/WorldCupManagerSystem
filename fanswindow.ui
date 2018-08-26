@@ -51,7 +51,7 @@
    </property>
    <property name="icon">
     <iconset resource="resourse.qrc">
-     <normaloff>:/new/prefix1/icons8-scoreboard-48.png</normaloff>:/new/prefix1/icons8-scoreboard-48.png</iconset>
+     <normaloff>:/new/prefix1/image/icons8-classroom-48.png</normaloff>:/new/prefix1/image/icons8-classroom-48.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -126,7 +126,7 @@
    </property>
    <property name="icon">
     <iconset resource="resourse.qrc">
-     <normaloff>:/new/prefix1/icons8-find-user-male-48.png</normaloff>:/new/prefix1/icons8-find-user-male-48.png</iconset>
+     <normaloff>:/new/prefix1/image/icons8-find-user-male-96.png</normaloff>:/new/prefix1/image/icons8-find-user-male-96.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -195,7 +195,7 @@
    </property>
    <property name="icon">
     <iconset resource="resourse.qrc">
-     <normaloff>:/new/prefix1/icons8-teams-48.png</normaloff>:/new/prefix1/icons8-teams-48.png</iconset>
+     <normaloff>:/new/prefix1/image/icons8-teams-48.png</normaloff>:/new/prefix1/image/icons8-teams-48.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -254,7 +254,7 @@
    </property>
    <property name="icon">
     <iconset resource="resourse.qrc">
-     <normaloff>:/new/prefix1/icons8-gold-medal-48.png</normaloff>:/new/prefix1/icons8-gold-medal-48.png</iconset>
+     <normaloff>:/new/prefix1/image/icons8-soccer-48.png</normaloff>:/new/prefix1/image/icons8-soccer-48.png</iconset>
    </property>
    <property name="iconSize">
     <size>

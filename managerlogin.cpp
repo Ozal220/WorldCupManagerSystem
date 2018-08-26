@@ -9,7 +9,7 @@ managerLogin::managerLogin(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowTitle("World Cup!");
-    setWindowIcon(QIcon("icon.ico"));
+    setWindowIcon(QIcon("image/icon.ico"));
     this->setAttribute(Qt::WA_DeleteOnClose,1);
     ui->warningLabel->setVisible(false);
     ui->nameLineEdit->setPlaceholderText(QString::fromStdString("请输入账号"));
